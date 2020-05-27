@@ -1,0 +1,26 @@
+sudo apt update && sudo apt upgrade -y
+
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update -y
+sudo apt install git
+
+wget "https://go.microsoft.com/fwlink/?LinkID=620884" -O vscode.tar.gz
+sudo tar -vzxf vscode.tar.gz -C /opt/
+sudo mv /opt/VSCode*/ /opt/vscode/
+sudo ln -sf /opt/vscode/code /usr/bin/code
+
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.7
+sudo apt install python3-pip
+
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.4.2-amd64.deb -O slack.deb
+sudo dpkg -i slack.deb
+sudo apt install -f
+
+sudo apt install python3-dev -y
+sudo -H pip3 install --upgrade pip
+sudo -H pip3 install virtualenv
+sudo -H pip3 install -U setuptools
+sudo -H pip3 install jupyter
+sudo apt install jupyter-core
